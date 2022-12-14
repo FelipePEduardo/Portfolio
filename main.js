@@ -8,6 +8,10 @@ const openMenu = document.querySelector('.open-menu')
 const menuItensMobile = document.querySelectorAll('.open-menu a')
 const menuItensDesktop = document.querySelectorAll('.menu-desktop a')
 
+const cardsProjects = document.querySelector('.cards-projects')
+
+const url = 'https://api.github.com/users/FelipePEduardo/repos'
+
 /* SCROLL PAGE */
 function scrollToSectionDesktop(e) {
   e.preventDefault()
@@ -28,7 +32,7 @@ function scrollToSectionMobile(e) {
   const section = document.querySelector(id).offsetTop
 
   window.scroll({
-    top: section - 200,
+    top: section - 250,
     behavior: 'smooth'
   })
 }

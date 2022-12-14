@@ -10,15 +10,15 @@
 
   --bg-body: hsl(0, 0%, 9%);
   --bg-nav: hsl(0, 0%, 5%);
-  --bg-gray: hsl(0, 0%, 11%);
+  --bg-gray: hsl(0, 0%, 12%);
   --bg-menu: hsl(0, 0%, 20%);
 
   --bg-menu-light-mode: hsl(0, 0%, 48%);
   --bg-body-light-mode: rgb(227, 227, 227);
-  --bg-gray-light-mode: rgb(219, 219, 219);
+  --bg-gray-light-mode: rgb(206, 205, 205);
 
   --purple: hsl(258, 73%, 62%);
-  
+
   --white: hsla(0, 0%, 100%, 1);
   --black: hsl(0, 0%, 0%);
 
@@ -31,7 +31,7 @@ body {
   font-size: 1.6rem;
   background: var(--bg-body);
   color: var(--white);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 body * {
@@ -47,6 +47,10 @@ body * {
 
 .hide {
   display: none;
+}
+
+.active {
+  border-bottom: 1px solid white;
 }
 
 ul {
@@ -80,7 +84,7 @@ section {
 }
 
 button:disabled {
-  opacity: .3;
+  opacity: 0.3;
 }
 
 /* ========= NAVIGATION ================ */
@@ -98,7 +102,7 @@ nav {
   position: fixed;
   top: 0;
 
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 nav > a {
@@ -202,11 +206,11 @@ main {
   background: transparent;
 
   padding: 1.2rem 2.7rem;
-  
+
   border: 1px solid var(--purple);
   border-radius: 5px;
 
-  transition: .3s;
+  transition: 0.3s;
 
   margin-bottom: 3rem;
 }
@@ -223,7 +227,7 @@ main {
 
 #initial-content .buttons-theme button svg {
   fill: var(--white);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 #initial-content .buttons-theme button:hover svg {
@@ -237,7 +241,7 @@ main {
   text-align: start;
   margin-bottom: 3rem;
 
-  background-color: #191919;
+  background-color: var(--bg-gray);
 }
 
 #about-me div {
@@ -252,7 +256,7 @@ main {
 #about-me p {
   font-weight: 400;
   font-size: 2.5rem;
-  line-height: 3rem;
+  line-height: 130%;
 
   margin: 0 auto;
 }
@@ -301,7 +305,7 @@ main {
   border: none;
   border-radius: 50%;
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 #contact .social-medias button:hover {
@@ -347,7 +351,7 @@ main {
   color: var(--black);
   background: var(--white);
   border-radius: 8px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 #hard-skills .skill:hover {
@@ -374,17 +378,16 @@ main {
 
 #projects .card {
   width: 32rem;
-  min-height: 35rem;
+  height: 30rem;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 
-  background: #222222;
+  background: var(--bg-gray);
   border-radius: 10px;
-  box-shadow: 2px 2px 1px var(--white), 4px 4px 5px var(--black);
 
-  padding: 2rem;
+  padding: 2.5rem;
   margin: 0 auto;
 }
 
@@ -397,7 +400,7 @@ main {
   margin-bottom: 1.5rem;
 }
 
-#projects .card h4{
+#projects .card h4 {
   font-size: 3rem;
 
   color: var(--purple);
@@ -406,6 +409,7 @@ main {
 }
 
 #projects .card p {
+  height: 12rem;
   font-size: 1.8rem;
 
   margin-bottom: 2rem;
@@ -429,10 +433,10 @@ main {
   border: none;
   border-radius: 5px;
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
-#projects .card .buttons button:hover {
+#projects .card .buttons button:not(:disabled):hover {
   transform: scale(1.1);
 }
 
@@ -464,19 +468,19 @@ footer p a {
 body.light {
   background: var(--bg-body-light-mode);
   color: var(--text-color-light-mode);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 body.light nav {
   background: var(--bg-menu-light-mode);
-  transition: background .3s;
+  transition: background 0.3s;
 }
 
 body.light nav > a {
   color: var(--white);
 }
 
-body.light .svgs svg path{
+body.light .svgs svg path {
   fill: var(--black);
 }
 
@@ -488,7 +492,7 @@ body.light nav .open-menu {
   background: var(--bg-menu-light-mode);
 }
 
-body.light #initial-content .buttons-theme button svg  {
+body.light #initial-content .buttons-theme button svg {
   fill: var(--black);
 }
 
@@ -500,7 +504,8 @@ body.light #initial-content .profile-image {
   background: var(--bg-gray-light-mode);
 }
 
-body.light #about-me, body.light #hard-skills {
+body.light #about-me,
+body.light #hard-skills {
   background: var(--bg-gray-light-mode);
 }
 
@@ -512,13 +517,10 @@ body.light #hard-skills .skill:hover {
 
 body.light #projects .card {
   background: var(--bg-gray-light-mode);
-
-  box-shadow: 3px 3px 5px var(--black);
 }
 
-
 /* ========== MEDIA ============= */
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   nav .open-menu {
     display: none;
   }
@@ -550,10 +552,10 @@ body.light #projects .card {
   #initial-content .profile-image {
     margin: 0;
   }
-  
+
   #initial-content .profile-image img {
     width: 100%;
-  
+
     border-radius: 50%;
   }
 
@@ -567,7 +569,7 @@ body.light #projects .card {
 
   #contact .social-medias ul {
     width: 90%;
-  
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -581,7 +583,7 @@ body.light #projects .card {
 
 /* ========== KEYFRAMES ============= */
 @keyframes toRight {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(-60px);
   }
@@ -592,7 +594,7 @@ body.light #projects .card {
 }
 
 @keyframes toLeft {
-  0%{
+  0% {
     opacity: 0;
     transform: translateX(60px);
   }
@@ -603,7 +605,7 @@ body.light #projects .card {
 }
 
 @keyframes rotate {
-  0%{
+  0% {
     transform: rotate(180deg);
   }
   100% {
