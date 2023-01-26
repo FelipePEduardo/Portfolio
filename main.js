@@ -32,7 +32,7 @@ function scrollToSectionMobile(e) {
   const section = document.querySelector(id).offsetTop
 
   window.scroll({
-    top: section - 250,
+    top: section - 140,
     behavior: 'smooth'
   })
 }
