@@ -4,7 +4,7 @@ Primeiro portfólio que desenvolvi, sei que tem muita coisa pra melhorar mas vou
 
 ## Demonstração
 
-![image](https://user-images.githubusercontent.com/103855358/214916444-1352a8e7-1aa1-4592-ad52-df312bac97b7.png) ![image](https://user-images.githubusercontent.com/103855358/214916612-9be1b126-d806-4b64-a57d-c512ec7985ee.png)
+![image](https://user-images.githubusercontent.com/103855358/214916444-1352a8e7-1aa1-4592-ad52-df312bac97b7.png) ![image](https://user-images.githubusercontent.com/103855358/214916714-4ea8b6a4-190f-4431-a66b-93c8690edeee.png)
 
 
 ## Stack utilizada
